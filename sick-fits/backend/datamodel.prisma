@@ -1,0 +1,10 @@
+type User {
+  id: ID! @id
+  name: String!
+  email: String!
+},
+
+type TestUser {
+  id: ID! @id
+  name: String!
+}
