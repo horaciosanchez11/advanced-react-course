@@ -52,6 +52,10 @@ const StyledHeader = styled.header`
 		grid-template-columns: 1fr auto;
 		border-bottom: 1px solid ${props => props.theme.lightgrey};
 	}
+	a {
+		text-decoration:none;
+		color: #393939;
+	}
 
 `;
 

@@ -22,6 +22,10 @@ const Inner = styled.div`
 	max-width:${props => props.theme.maxWidth};
 	margin:0 auto;
 	padding:2rem;
+	a {
+		text-decoration:none;
+		color: #393939;
+	}
 `;
 
 injectGlobal `
