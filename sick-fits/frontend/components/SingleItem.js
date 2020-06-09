@@ -50,7 +50,7 @@ class SingleItem extends Component {
 							</Head>
 							<img src={data.item.largeImage} alt={data.item.title} />
 							<div className="details">
-								<h2>Viewing {data.item.title}</h2>
+								<h2>{data.item.title}</h2>
 								<p>{data.item.description}</p>
 							</div>
 						</SingleItemStyles>
