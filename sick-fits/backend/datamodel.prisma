@@ -15,6 +15,7 @@ type User {
   resetToken: String
   resetTokenExpiry: Float
   permissions: [Permission] @scalarList(strategy: RELATION)
+  cart: [CartItem!]!
 },
 
 type Item {
@@ -31,4 +32,11 @@ type Item {
 type TestUser {
   id: ID! @id
   name: String!
+}
+
+type CartItem {
+	id: ID! @id
+	quantity: Int! @default(value: 1)
+	item: Item!
+	user: User!
 }
