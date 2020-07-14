@@ -29,6 +29,7 @@ function totalItems(cart) {
 
 class TakeMyMoney extends React.Component {
 	onToken = async (res, createOrder) => {
+		NProgress.start();
 		console.log('token called: ');
 		console.log(res);
 
@@ -41,6 +42,10 @@ class TakeMyMoney extends React.Component {
 			alert(err.message);
 		});
 		console.log(order);
+		Router.push({
+			pathname: '/order',
+			query: {id: order.data.createOrder.id},
+		});
 	}
 
 	render() {

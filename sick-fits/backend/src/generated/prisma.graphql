@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/horacio-sanchez/sick-fits-1/dev
-# timestamp: Thu Jul 09 2020 17:41:05 GMT-0500 (GMT-05:00)
+# timestamp: Tue Jul 14 2020 17:58:49 GMT-0500 (GMT-05:00)
 
 type AggregateCartItem {
   count: Int!
@@ -800,6 +800,7 @@ type Order implements Node {
   total: Int!
   user: User!
   charge: String!
+  createdAt: DateTime!
 }
 
 """A connection to a list of items."""
@@ -1529,12 +1530,15 @@ enum OrderOrderByInput {
   total_DESC
   charge_ASC
   charge_DESC
+  createdAt_ASC
+  createdAt_DESC
 }
 
 type OrderPreviousValues {
   id: ID!
   total: Int!
   charge: String!
+  createdAt: DateTime!
 }
 
 type OrderSubscriptionPayload {
@@ -1699,6 +1703,28 @@ input OrderWhereInput {
 
   """All values not ending with the given string."""
   charge_not_ends_with: String
+  createdAt: DateTime
+
+  """All values that are not equal to given value."""
+  createdAt_not: DateTime
+
+  """All values that are contained in given list."""
+  createdAt_in: [DateTime!]
+
+  """All values that are not contained in given list."""
+  createdAt_not_in: [DateTime!]
+
+  """All values less than the given value."""
+  createdAt_lt: DateTime
+
+  """All values less than or equal the given value."""
+  createdAt_lte: DateTime
+
+  """All values greater than the given value."""
+  createdAt_gt: DateTime
+
+  """All values greater than or equal the given value."""
+  createdAt_gte: DateTime
   items_every: OrderItemWhereInput
   items_some: OrderItemWhereInput
   items_none: OrderItemWhereInput
