@@ -77,7 +77,7 @@ class Order extends React.Component {
 											<p>Each: {formatMoney(item.price)}</p>
 											<p>SubTotal: {formatMoney(item.price * item.quantity)}</p>
 											<p>{item.description}</p>
-										</div>										
+										</div>
 									</div>
 								))}
 							</div>
