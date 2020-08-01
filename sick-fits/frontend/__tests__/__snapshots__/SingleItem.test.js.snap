@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleItem /> errors with a not found item 1`] = `
+<p>
+  No item found for this id: 
+  123
+</p>
+`;
+
+exports[`<SingleItem /> renders with proper data 1`] = `
+<h2>
+  dogs are best
+</h2>
+`;
+
+exports[`<SingleItem /> renders with proper data 2`] = `
+<img
+  alt="dogs are best"
+  src="dog.jpg"
+/>
+`;
+
+exports[`<SingleItem /> renders with proper data 3`] = `
+<p>
+  dogs
+</p>
+`;
