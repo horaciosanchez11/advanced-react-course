@@ -63,7 +63,7 @@ class CreateItem extends Component {
 		return (
 			<Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
 				{(createItem, {loading, error, called, data}) => (
-					<Form onSubmit={async e => {
+					<Form data-test="form" onSubmit={async e => {
 						e.preventDefault();
 						// call the mutation
 						const res = await createItem();
